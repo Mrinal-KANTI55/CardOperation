@@ -23,7 +23,8 @@ body {
 .search-button {
   padding: 10px 50px;
   border-radius: 25px;
-  margin-left: 20px;
+  /* solve the button problem */
+  margin-left: 50px;
 }
 #all-products {
   display: grid;
