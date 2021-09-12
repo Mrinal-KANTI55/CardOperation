@@ -74,6 +74,8 @@ const updateTaxAndCharge = () => {
     setInnerText("delivery-charge", 60);
     setInnerText("total-tax", priceConverted * 0.4);
   }
+  // by call updateTotal function solve the problem
+  updateTotal();
 };
 
 //grandTotal update function
