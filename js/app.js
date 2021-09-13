@@ -5,6 +5,7 @@ const loadProducts = () => {
     .then((data) => showProducts(data));
 };
 loadProducts();
+// card detail show or hide 
 const displayInfo=(id,order)=>document.getElementById(id).style.display=order;
 // show all product in UI 
 const showProducts = (products) => {
@@ -28,6 +29,7 @@ const showProducts = (products) => {
     document.getElementById("all-products").appendChild(div);
   }
 };
+// show each product detail
 const detailCart=(title,description,image)=>{
   displayInfo('detail','block');
   const displayId='detail';
