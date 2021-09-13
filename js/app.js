@@ -5,7 +5,7 @@ const loadProducts = () => {
     .then((data) => showProducts(data));
 };
 loadProducts();
-
+const displayInfo=(id,order)=>document.getElementById(id).style.display=order;
 // show all product in UI 
 const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
@@ -29,11 +29,15 @@ const showProducts = (products) => {
   }
 };
 const detailCart=(title,description,image)=>{
+  displayInfo('detail','block');
+  const displayId='detail';
+  const displayStyle='none';
   const detail = document.getElementById('detail');
   detail.innerHTML=`
   <h3>${title}</h3>
   <img class="cardDetailImage" src=${image}></img>
   <p>description: ${description}</p>
+  <button onclick="displayInfo('${displayId}','${displayStyle}')" class="buy-now btn btn-success">Close</button>
   `;
 }
 let count = 0;
