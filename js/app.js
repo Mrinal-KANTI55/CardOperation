@@ -13,7 +13,7 @@ const showProducts = (products) => {
     //here solve image problem
     const image = product.image;
     const div = document.createElement("div");
-    div.classList.add("product");
+    div.classList.add("product","colorEachCard");
     div.innerHTML = `<div class="single-product">
       <div>
     <img class="product-image" src=${image}></img>
@@ -23,11 +23,19 @@ const showProducts = (products) => {
       <h5>Total Bay: ${product.rating.count} & Rate : ${product.rating.rate}</h5>
       <h2>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
+      <button onclick="detailCart('${product.title}','${product.description}','${product.image}')" id="details-btn" class="btn btn-danger">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
 };
+const detailCart=(title,description,image)=>{
+  const detail = document.getElementById('detail');
+  detail.innerHTML=`
+  <h3>${title}</h3>
+  <img class="cardDetailImage" src=${image}></img>
+  <p>description: ${description}</p>
+  `;
+}
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;

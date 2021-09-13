@@ -49,6 +49,10 @@ body {
   width: 150px;
   height: 150px;
 }
+.cardDetailImage {
+  width: 250px;
+  height: 250px;
+}
 .cart {
   width: 350px;
   /* border: 1px solid green; */
@@ -60,6 +64,19 @@ body {
 }
 .cart-main {
   padding-right: 30px;
+}
+.cardDetailInformation{
+  margin-left: 30%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 20px;
+  border: 2px solid gray;
+  width: 35%;
+  background: linear-gradient(white,rgb(247, 230, 230));
+  border-radius: 15px;
+}
+.colorEachCard{
+  background: linear-gradient(white,rgb(250, 242, 242)) !important;
 }
 @media only screen and (max-width: 768px) {
   #all-products {
