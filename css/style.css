@@ -12,6 +12,7 @@ body {
   outline: none;
   border: none;
 }
+  /* solve the button problem */
 .search-box {
   border: 1px solid rgb(3, 118, 211);
   width: 281px;
@@ -19,12 +20,12 @@ body {
   margin: auto;
   margin-top: 50px;
   border-right: none;
+  display: flex;
+  justify-content: space-between;
 }
 .search-button {
   padding: 10px 50px;
   border-radius: 25px;
-  /* solve the button problem */
-  margin-left: 50px;
 }
 #all-products {
   display: grid;
