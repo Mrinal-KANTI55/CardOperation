@@ -21,7 +21,7 @@ const showProducts = (products) => {
       </div>
       <h3>${product.title}</h3>
       <p>Category: ${product.category}</p>
-      <h5>Total Bay: ${product.rating.count} & Rate : ${product.rating.rate}</h5>
+      <h5>Total Buy: ${product.rating.count} & Rate : ${product.rating.rate}</h5>
       <h2>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
       <button onclick="detailCart('${product.title}','${product.description}','${product.image}')" id="details-btn" class="btn btn-danger">Details</button></div>
@@ -64,7 +64,7 @@ const updatePrice = (id, value) => {
   const convertPrice = parseFloat(value);
   const total = convertedOldPrice + convertPrice;
   //change it for get correct answer
-  document.getElementById(id).innerText = total;
+  document.getElementById(id).innerText = total.toFixed(2);
 };
 
 // set innerText function
